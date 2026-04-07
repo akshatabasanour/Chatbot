@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  /* Premium aesthetic black and silver horizontal gradient */
+  --bg-gradient: linear-gradient(to right, #000000, #434343, #8a8d91);
+  
+  /* Diagonal gray linear gradient text */
+  --text-gradient: linear-gradient(45deg, #3a3a3a, #7a7a7a, #2a2a2a);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  position: relative;
+  z-index: 1;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('/bhajarangi.png') no-repeat center center;
+  background-size: 70vmin; /* Scales nicely based on viewport */
+  mix-blend-mode: screen; /* Used to drop the inverted black background */
+  filter: invert(1); /* Inverts the dark image to silver/white */
+  z-index: -1;
+  pointer-events: none;
+  animation: floatImage 15s ease-in-out infinite alternate;
+}
+
+@keyframes floatImage {
+  0% { transform: translateY(0) scale(1); opacity: 0.15; }
+  100% { transform: translateY(-15px) scale(1.03); opacity: 0.3; }
+}

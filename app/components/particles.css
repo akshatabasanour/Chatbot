@@ -1,0 +1,21 @@
+.diamond-particle {
+  position: fixed;
+  pointer-events: none;
+  background: #ffffff;
+  /* Diamond color and shine: icy bright blue/silver */
+  box-shadow: 0 0 8px 3px rgba(181, 234, 255, 0.9), 0 0 15px 5px rgba(255, 255, 255, 0.6);
+  /* The rotate makes it a diamond shape */
+  animation: shineFade 0.7s forwards ease-out;
+  z-index: 9999;
+}
+
+@keyframes shineFade {
+  0% {
+    opacity: 1;
+    transform: rotate(45deg) scale(1) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) scale(0.2) translateY(40px);
+  }
+}
