@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver Query</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-bg"></div>
+    <div class="container">
+        <header>
+            <h1 id="main-title">Premium Gradient Query</h1>
+            <p>Write your query and watch the silver flow.</p>
+        </header>
+
+        <main>
+            <div class="input-container">
+                <input type="text" id="query-input" placeholder="Ask anything..." autocomplete="off">
+                <div class="input-glow"></div>
+                <button id="submit-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="output-area">
+                <span id="typing-indicator"></span>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Developed with High Aesthetics</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
